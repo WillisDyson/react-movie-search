@@ -1,13 +1,10 @@
 const Movie = ({ movie }) => {
     return (
-        <div
-            style={{ border: "1px solid gray", width: "150px", textAlign: "center" }}
-        >
-            <h3>{movie.original_title}</h3>
+        <div class="movie">
+            <h2 class="movie-title">{movie.original_title}</h2>
             {movie.poster_path && (
-                <img
+                <img class="movie-img"
                     src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                    style={{ width: "100px" }}
                 />
             )}
         </div>

@@ -21,18 +21,19 @@ const MovieSearchPage = () => {
     };
 
     return (
-        <div>
-            <h2>Movie search page</h2>
-            <form onSubmit={handleMovieSearch} style={{ marginBottom: "30px" }}>
+        <div class="wrapper">
+            <h1>Movie search page</h1>
+            <form onSubmit={handleMovieSearch}>
                 <input
+                    class="search"
                     type="text"
-                    placeholder="Search for a movie"
+                    placeholder="Enter movie name"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <button type="submit">Search</button>
             </form>
-            <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <div class="movies">
                 {movies.map((movie) => (
                     <Movie key={movie.id} movie={movie} />
                 ))}
